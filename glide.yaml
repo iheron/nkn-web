@@ -1,0 +1,9 @@
+package: nkn-web
+ignore:
+- golang.org/x/sys/unix
+- golang.org/x/crypto/ssh/terminal
+- google.golang.org/appengine/cloudsql
+import:
+- package: github.com/gin-gonic/gin
+- package: github.com/urfave/cli
+  version: ^1.20.0
