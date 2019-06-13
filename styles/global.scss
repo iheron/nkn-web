@@ -1,7 +1,8 @@
 body {
 min-width: 980px;
 }
-
+.border-right{border-right-width: 1px;border-right-style: solid;}
+.card-border{border-color:rgba(0,0,0,0.12)}
 .v-toolbar__title {
   width: 100%;
 }
