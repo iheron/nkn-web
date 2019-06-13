@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 	"nkn-web/src/config"
-	"nkn-web/src/routes/home"
+	//"nkn-web/src/routes/home"
 	"os"
 )
 
@@ -43,14 +43,15 @@ func main() {
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	app := gin.Default()
 
-	app.Static("/assets", "./assets")
+	//app.Static("/assets", "./assets")
+	app.StaticFS("/web", http.Dir("dist"))
 	//_ = flag.String("config", "./config/config.json","config file")
 	//flag.Parse()
 
 	//app.Use(routerv1.Sign())
 	//	app.Use(routerv1.Router(app.Group("/api/v1")))
-	(&home.HomeRouter{}).RouterByGroup(app.Group("/api/v1"))
-	app.GET("/ping",  func(c *gin.Context) {
+	//(&home.HomeRouter{}).RouterByGroup(app.Group("/api/v1"))
+	app.GET("/ping", func(c *gin.Context) {
 		log.Println("http server start at : " + config.Parameters.Port)
 		c.JSON(200, gin.H{
 			"message": "pong",
@@ -58,12 +59,12 @@ func main() {
 	})
 
 	app.Use(func(context *gin.Context) {
-		err := context.MustGet("error")
+		//err := context.MustGet("error")
 
-		if err != nil {
-			context.JSON(http.StatusInternalServerError, "server error")
-			return
-		}
+		//if err != nil {
+		//	context.JSON(http.StatusInternalServerError, "server error")
+		//	return
+		//}
 
 		context.JSON(http.StatusNotFound, "not found")
 	})
