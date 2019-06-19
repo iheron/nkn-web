@@ -1,19 +1,28 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
+
+  <v-layout column justify-center align-center>
+    <v-btn color="pink" dark>Success</v-btn>
+    <v-btn color="error">Error</v-btn>
+    <v-btn color="warning">Warning</v-btn>
+    <v-btn color="info">Info</v-btn>
+    <v-btn color="pink">Success</v-btn>
+
     <v-flex
       xs12
       sm8
       md6
-    >
+    ><v-divider
+      class="mx-3"
+      inset
+      vertical
+    ></v-divider>
       <v-card>
-        <v-container
-          fluid
-          grid-list-lg
-        >
+        <v-container fluid grid-list-lg>
+
+          <v-btn depressed large color="primary">Primary</v-btn>
+          <v-btn color="pink">
+            <v-icon dark>favorite</v-icon>
+          </v-btn>
           <v-layout row wrap>
             <v-flex xs12>
               <v-card color="blue-grey darken-2" class="white--text">
@@ -86,6 +95,10 @@
                 <v-card-actions class="pa-3">
                   Rate this album
                   <v-spacer></v-spacer>
+                  <v-btn color="pink">Success</v-btn>
+                  <v-btn color="error">Error</v-btn>
+                  <v-btn color="warning">Warning</v-btn>
+                  <v-btn color="info">Info</v-btn>
                   <v-icon>star_border</v-icon>
                   <v-icon>star_border</v-icon>
                   <v-icon>star_border</v-icon>
@@ -276,13 +289,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo
+
   },
 
   async mounted(){

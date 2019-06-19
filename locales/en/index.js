@@ -1,6 +1,5 @@
 import Home from './home'
 
 export default {
-  language: 'English',
-  home: Home
+  language: 'English'
 }
