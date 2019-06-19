@@ -33,7 +33,7 @@
       <div class="divider-vertical mx-3"></div>
       <v-toolbar-title>
         <v-avatar tile size="30">
-          <img src="/img/logo.png" alt="avatar">
+          <img src="~/static/img/logo.png" alt="avatar">
         </v-avatar>
         NKN WEB
       </v-toolbar-title>
