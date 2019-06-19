@@ -16,9 +16,9 @@
     <v-card-title>
       <v-text-field dark
                     label="Open wallet"
-                    placeholder="Upload wallet"
+
                     v-model="fileName"
-                    outline
+                    box
                     readonly>
         <template v-slot:append>
           <v-btn icon small @click="pickFile">
@@ -30,8 +30,7 @@
       <input type="file" style="display: none" ref="walletFile" @change="onFilePicked">
       <v-text-field dark
                     label="Password"
-                    placeholder="Passowrd"
-                    outline
+                    box
                     type="password">
         <template v-slot:append>
           <v-btn icon small>

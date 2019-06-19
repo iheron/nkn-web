@@ -17,7 +17,7 @@
       <v-text-field dark
                     label="Address"
                     placeholder="Address"
-                    outline
+                    box
                     value="NSwZKAehPzs4DTP7Hugf3C58V4uX4NE5Fa"
                     readonly>
         <template v-slot:append>
@@ -31,7 +31,7 @@
                     label="Balance"
                     placeholder="0"
                     value="1230"
-                    outline
+                    box
                     readonly>
         <template v-slot:prepend-inner>
           <div style="margin-top: 10px">
