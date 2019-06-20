@@ -1,6 +1,8 @@
 <template>
   <v-layout flex row wrap>
     <v-flex>
+      <v-checkbox v-model="selected" label="John" value="John"></v-checkbox>
+      <v-checkbox v-model="selected" label="Jacob" value="Jacob"></v-checkbox>
       <LastMiningRewards></LastMiningRewards>
     </v-flex>
     <v-flex>

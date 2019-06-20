@@ -18,13 +18,15 @@
             :headers="headers"
             :items="desserts"
             :search="search"
-            class="elevation-1"
             prev-icon="chevron_left"
             next-icon="chevron_right"
             sort-icon="arrow_upward"
             :rows-per-page-items="[]"
             :pagination.sync="pagination"
           >
+            <template slot="headerCell" slot-scope="{ header }">
+              <span class="subheading font-weight-light" v-text="header.text"/>
+            </template>
             <template v-slot:items="props">
               <td>{{ props.item.id }}</td>
               <td>{{ props.item.ip }}</td>

@@ -26,19 +26,19 @@
         </v-layout>
       </v-container>
     </v-navigation-drawer>
-    <v-toolbar :clipped-left="clipped" dark fixed app tabs color="indigo" dense>
+    <v-toolbar :clipped-left="clipped" dark app tabs color="indigo" dense>
       <v-toolbar-side-icon @click="drawer = !drawer">
         <v-icon class="fas fa-wallet"></v-icon>
       </v-toolbar-side-icon>
       <div class="divider-vertical mx-3"></div>
-      <v-toolbar-title>
+      <v-toolbar-title class="ml-2">
         <v-avatar tile size="30">
           <img src="~/static/img/logo.png" alt="avatar">
         </v-avatar>
         NKN WEB
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <NodeStatus></NodeStatus>
+      <NodeRunStatus></NodeRunStatus>
       <div class="divider-vertical mx-3"></div>
       <v-badge color="transparent">
         <span>Node version: v0.8.0-alpha-174-gd090</span>
@@ -46,7 +46,7 @@
       <template v-slot:extension>
         <v-tabs align-with-title color="transparent">
           <v-tab href="#dashboard" to="/">Dashboard</v-tab>
-          <v-tab href="#node_status">Node status</v-tab>
+          <v-tab href="#node_status" to="/node-status">Node status</v-tab>
           <v-tab href="#settings" to="/settings">Settings</v-tab>
           <v-tabs-slider color="pink accent-3"></v-tabs-slider>
         </v-tabs>
@@ -82,7 +82,7 @@
   import Wallet from '~/components/wallet/Wallet.vue'
   import Wallet2 from '~/components/wallet/Wallet2.vue'
   import AddWallet from '~/components/wallet/AddWallet.vue'
-  import NodeStatus from '~/components/status/NodeStatus.vue'
+  import NodeRunStatus from '~/components/status/NodeRunStatus.vue'
   import '~/styles/status.scss'
 
   export default {
@@ -91,7 +91,7 @@
       Wallet,
       Wallet2,
       AddWallet,
-      NodeStatus
+      NodeRunStatus
     },
     data() {
       return {
